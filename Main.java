@@ -17,25 +17,25 @@ public class Main {
             }
         }
         System.out.print("\nLiệt kê các số nguyên tố nhỏ hơn 100 theo vòng lặp while: ");
-        int k=3;
-        while (k<100)
+        int k1=3;
+        while (k1<100)
         {
-        if (baiTapBuoi4.checkSnt(k))
+        if (baiTapBuoi4.checkSnt(k1))
             {
-                System.out.print(k+"\t");
+                System.out.print(k1+"\t");
             }
-        k++;
+        k1++;
         }
 
         System.out.print("\nLiệt kê các số nguyên tố nhỏ hơn 100 theo vòng lặp do: ");
-        int p=3;
+        int k2=3;
         do{
-        if (baiTapBuoi4.checkSnt(p))
+        if (baiTapBuoi4.checkSnt(k2))
         {
-            System.out.print(p +"\t");
+            System.out.print(k2 +"\t");
         }
-        p++;}
-        while (p<100);
+        k2++;}
+        while (k2<100);
 
         System.out.print("\nNhập số lương số nguyên tố đầu tiên cần liệt kê: ");
         int h = scanner.nextInt();
@@ -50,18 +50,30 @@ public class Main {
         }
 
         System.out.print("\nLiệt kê theo vòng lặp while: ");
-        int q = 2;
+        int q1 = 2;
         int dem1 =0;
         while(dem1 < h)
         {
-            if (baiTapBuoi4.checkSnt(q))
+            if (baiTapBuoi4.checkSnt(q1))
             {
-                System.out.print(q+"\t");
+                System.out.print(q1+"\t");
                 dem1 ++;
             }
-            q++;
+            q1++;
         }
 
+        System.out.print("\nLiệt kê theo vòng lặp do: ");
+        int q2 = 2;
+        int dem2 =0;
+        do {
+            if (baiTapBuoi4.checkSnt(q2))
+            {
+                System.out.print( q2+ "\t");
+                dem2 ++;
+            }
+            q2++;
+        }
+        while(dem2 < h);
 
 
     }
