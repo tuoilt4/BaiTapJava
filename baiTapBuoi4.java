@@ -55,7 +55,7 @@ public class baiTapBuoi4
         }
     }
 
-    //Tính dãy số fibonaci
+    //Check số nguyên tố
     //Theo vòng lặp for
     public static boolean checkSnt(int n) {
         if (n < 2) {
@@ -70,10 +70,10 @@ public class baiTapBuoi4
         }
     }
 
-    // ham in ra so nguyen to theo vòng lặp
-    static void ChuoiSnt1 ()
+    // ham in ra so nguyen to theo vòng lặp for
+    static void ChuoiSnt1 (int n)
     {
-        for(int i = 1 ;i<100;i++)
+        for(int i = 1 ;i<n;i++)
         {
             if(checkSnt(i))
             {
@@ -81,14 +81,70 @@ public class baiTapBuoi4
             }
         }
     }
-    /*static int ChuoiSnt2 (int n) {
-        int dem = 0;
-        for (int i = 2; dem < n; i++) {
-            if (checkSnt(i)) {
-                System.out.print("\t" + i);
-                dem++;
+
+    // ham in ra so nguyen to theo vòng lặp while
+    static void ChuoiSnt2 (int n){
+        int i=3;
+        while (i<n)
+        {
+            if (baiTapBuoi4.checkSnt(i))
+            {
+                System.out.print(i+"\t");
             }
             i++;
         }
-    }*/
+    }
+    // ham in ra so nguyen to theo vòng lặp do
+    static void ChuoiSnt3 (int n)
+    {
+    int i =3;
+        do{
+    if (baiTapBuoi4.checkSnt(i))
+    {
+        System.out.print(i +"\t");
+    }
+    i++;}
+        while (i<n);
+    }
+
+    //ham in ra n số nguyên tố đầu tiên theo vòng lặp for
+    static void ChuoiSnt4 (int n) {
+        int dem = 0;
+        for (int i = 2; dem < n; i++)
+        {
+            if (checkSnt(i))
+            {
+                System.out.print("\t" + i);
+                dem++;
+            };
+        }
+    }
+    //hàm in ra n số nguyên tố đầu tiên theo vòng lặp while
+    static void ChuoiSnt5 (int n) {
+        int i = 2;
+        int dem =0;
+        while(dem < n)
+        {
+            if (baiTapBuoi4.checkSnt(i))
+            {
+                System.out.print(i+"\t");
+                dem ++;
+            }
+            i++;
+        }
+    }
+    static void ChuoiSnt6 (int n){
+    int i = 2;
+    int dem =0;
+    do {
+        if (baiTapBuoi4.checkSnt(i))
+        {
+            System.out.print( i+ "\t");
+            dem ++;
+        }
+        i++;
+    }
+    while(dem <n); }
+
+
 }
