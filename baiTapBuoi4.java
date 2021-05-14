@@ -71,27 +71,24 @@ public class baiTapBuoi4
     }
 
     // ham in ra so nguyen to theo vòng lặp
-    void  ChuoiSnt1 (int n)
+    static void ChuoiSnt1 ()
     {
-        for(int i = 1 ;i<n;i++)
+        for(int i = 1 ;i<100;i++)
         {
             if(checkSnt(i))
             {
-                System.out.print("\t" +i);
+                 System.out.printf("\t %d",i);
             }
         }
     }
-    void ChuoiSnt2 (int n)
-    {
+    /*static int ChuoiSnt2 (int n) {
         int dem = 0;
-        for (int i=2; dem<n; i++)
-        {
-            if (checkSnt(i))
-            {
+        for (int i = 2; dem < n; i++) {
+            if (checkSnt(i)) {
                 System.out.print("\t" + i);
                 dem++;
             }
             i++;
         }
-    }
+    }*/
 }
